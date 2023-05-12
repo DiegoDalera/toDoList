@@ -1,0 +1,133 @@
+:root {
+    --primary: #A5C882;
+    --secondary: #d983d9;
+    --light: #e6b5da;
+    --dark: #000;
+    --diabled: #e8d4c5;
+    --white:white;
+    --gray:rgb(202, 202, 202);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans&family=Source+Sans+Pro:wght@200&display=swap');
+
+
+body {
+    font-family: 'Instrument Sans', sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-color:var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*:first-letter {
+    text-transform: capitalize;
+}
+
+.borde_redondeado {
+    border-radius: 4px;
+}
+
+.list {
+    margin: 25px auto;
+    padding: 25px;
+    background-color: var(--light);
+    width: 100%;
+    max-width: 400px;
+}
+
+.fecha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fecha_derecha {
+    display: flex;
+    align-items: center;
+}
+
+.mes_año{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#fecha_numero {
+    font-size: 50px;
+}
+
+#fecha_texto{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#dfecha_mes,
+#fecha_numero,
+#dfecha_texto  {
+    font-weight: bold;
+}
+
+#fecha_mes,
+#fech_año{
+    margin-left: 7px;
+    font-size: 20px;
+}
+
+form {
+    margin: 20px 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 35px auto;
+    grid-column-gap: 10px;
+}
+
+input {
+    border: none;
+    padding-left: 10px;
+    background-color: var(--gray);
+}
+
+input:focus {
+    outline: none;
+}
+
+.addTaskButton,
+.orderButton {
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.addTaskButton {
+    
+    border-radius: 50%;
+    font-size: 18px;
+    background-color: var(--gray);
+}
+
+.orderButton {
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.task {
+    background-color: var(--primary);
+    padding: 15px;
+    margin-top: 15px;
+    color: var(--dark);
+    cursor: pointer;
+}
+
+.done {
+    background-color: var(--diabled);
+    text-decoration: line-through;
+    color: var(--dark)
+}
